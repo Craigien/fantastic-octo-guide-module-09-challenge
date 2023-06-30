@@ -37,8 +37,8 @@ function getUserInput()
                 {
                     type: 'list',
                     message: 'Please choose project license type',
-                    choices: ['MIT License'],
-                    name: 'projectTitle',
+                    choices: ['MIT'],
+                    name: 'license',
                 },
                 {
                     type: 'input',
@@ -56,7 +56,7 @@ function getUserInput()
 
                 const markdownText = generate.generateMarkdown(response);
 
-                writeToFile("testREADME.md", markdownText);
+                writeToFile("./output_README/testREADME.md", markdownText);
             });
 }
 // TODO: Create a function to write README file
@@ -66,9 +66,9 @@ function writeToFile(fileName, data)
 
     console.log(data);
 
-    // fs.writeFile(fileName, data, (err) =>
-    // err ? console.error(err) : console.log("Successfully created " + fileName + " file")
-    // );
+    fs.writeFile(fileName, data, (err) =>
+    err ? console.error(err) : console.log("Successfully created " + fileName + " file")
+    );
 }
 
 // TODO: Create a function to initialize app
