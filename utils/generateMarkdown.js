@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) 
 {
-    if (license === none)
+    if (license === "None")
     {
       return "";
     }
@@ -17,14 +17,49 @@ function renderLicenseBadge(license)
 // If there is no license, return an empty string
 function renderLicenseLink(license)
 {
-  if (license === none)
+  if (license === "None")
   {
     return "";
   }
 
+  else if (license === "Apache License 2.0")
+  {
+    return `https://choosealicense.com/licenses/apache-2.0`;
+  }
+
+  else if (license === "Boost Software License 1.0")
+  {
+    return `https://choosealicense.com/licenses/bsl-1.0`;
+  }
+
+  else if (license === "GNU AGPLv3")
+  {
+    return `https://choosealicense.com/licenses/agpl-3.0`;
+  }
+
+  else if (license === "GNU GPLv3")
+  {
+    return `https://choosealicense.com/licenses/gpl-3.0`;
+  }
+
+  else if (license === "GNU LGPLv3")
+  {
+    return `https://choosealicense.com/licenses/lgpl-3.0`;
+  }
+
+  else if (license === "MIT")
+  {
+    return `https://choosealicense.com/licenses/mit`;
+  }
+
+  else if (license === "Mozilla Public License 2.0")
+  {
+    return `https://choosealicense.com/licenses/mpl-2.0`;
+  }
+
   else
   {
-    return `https://choosealicense.com/licenses/${license}`;
+    return `https://choosealicense.com/licenses/unlicense`;
   }
 }
 
@@ -32,14 +67,14 @@ function renderLicenseLink(license)
 // If there is no license, return an empty string
 function renderLicenseSection(license)
 {
-  if (license === none)
+  if (license === "None")
   {
     return "";
   }
 
   else
   {
-    return `License: ${license}`;
+    return `This project uses the ${license} license`;
   }
 }
 
@@ -57,9 +92,9 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
 
-  ## Description
+  ${licenseBadge}
 
-  Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+  ## Description
 
   ${data.description}
 
@@ -67,8 +102,10 @@ function generateMarkdown(data) {
 
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Questions](#questions)
   - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
 
   ## Installation
 
@@ -76,31 +113,27 @@ function generateMarkdown(data) {
 
   ## Usage
 
-  To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-      ![alt text](assets/images/screenshot.png)
-    
-  ## Questions
-
-  ${data.username}
-
-  ${data.email}
-
+  ${data.usage}
+  
   ## License
 
   ${selectedLicense}
 
-  ## Features
+  ${licenseLink}
 
-  If your project has a lot of features, list them here.
-
-  ## How to Contribute
+  ## Contributing
 
   ${data.contribution}
 
   ## Tests
 
-  ${data.test}`;
+  ${data.test}
+  
+  ## Questions
+
+  My GitHub profile: https://github.com/${data.username}
+
+  For answers to any questions regarding the project, please email me at: ${data.email}`;
 }
 
 module.exports = {

@@ -26,6 +26,11 @@ function getUserInput()
                 },
                 {
                     type: 'input',
+                    message: 'Please enter the project usage information',
+                    name: 'usage',
+                },
+                {
+                    type: 'input',
                     message: 'Please enter the project contribution guidelines',
                     name: 'contribution',
                 },
@@ -37,7 +42,7 @@ function getUserInput()
                 {
                     type: 'list',
                     message: 'Please choose project license type',
-                    choices: ['MIT'],
+                    choices: ['Apache License 2.0', 'Boost Software License 1.0', 'GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'MIT', 'Mozilla Public License 2.0', 'The Unlicense', 'None'],
                     name: 'license',
                 },
                 {
@@ -59,15 +64,14 @@ function getUserInput()
                 writeToFile("./output_README/testREADME.md", markdownText);
             });
 }
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data)
 {
-    // const markdownText = generate.generateMarkdown(data);
-
     console.log(data);
 
     fs.writeFile(fileName, data, (err) =>
-    err ? console.error(err) : console.log("Successfully created " + fileName + " file")
+    err ? console.error(err) : console.log("Successfully created " + fileName)
     );
 }
 
