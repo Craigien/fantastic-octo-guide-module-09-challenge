@@ -11,32 +11,32 @@ function getUserInput()
             .prompt([
                 {
                     type: 'input',
-                    message: 'Please enter the project title',
+                    message: 'Please enter the project title:',
                     name: 'title',
                 },
                 {
                     type: 'input',
-                    message: 'Please enter your project description',
+                    message: 'Please enter your project description:',
                     name: 'description',
                 },
                 {
                     type: 'input',
-                    message: 'Please enter the project installation instructions',
+                    message: 'Please enter the project installation instructions:',
                     name: 'installation',
                 },
                 {
                     type: 'input',
-                    message: 'Please enter the project usage information',
+                    message: 'Please enter the project usage information:',
                     name: 'usage',
                 },
                 {
                     type: 'input',
-                    message: 'Please enter the project contribution guidelines',
+                    message: 'Please enter the project contribution guidelines:',
                     name: 'contribution',
                 },
                 {
                     type: 'input',
-                    message: 'Please enter the project testing instructions',
+                    message: 'Please enter the project testing instructions:',
                     name: 'test',
                 },
                 {
@@ -47,12 +47,12 @@ function getUserInput()
                 },
                 {
                     type: 'input',
-                    message: 'Please enter your GitHub username',
+                    message: 'Please enter your GitHub username:',
                     name: 'username',
                 },
                 {
                     type: 'input',
-                    message: 'Please enter your email address',
+                    message: 'Please enter your email address:',
                     name: 'email',
                 },
             ])
