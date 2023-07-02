@@ -7,7 +7,7 @@ This web application allows the user to dynamically create a README file for a p
 
 ## Installation
 
-This application will require Node.js for use.  It will also require running "npm install" to pull in the inquirer library into your environment.
+This application will require Node.js to use.  It will also require running "npm install" to pull in the inquirer library into your environment.
 
 ## Usage
 

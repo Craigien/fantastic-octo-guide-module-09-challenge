@@ -9,7 +9,7 @@ function renderLicenseBadge(license)
 
     else
     {
-      return `https://img.shields.io/badge/License-${license}-blue`;
+      return `![License badge](https://img.shields.io/badge/License-${license}-blue)`;
     }
 }
 
@@ -88,7 +88,7 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
 
-  ![License badge](${licenseBadge})
+  ${licenseBadge}
 
   ## Description
 
