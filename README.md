@@ -13,9 +13,7 @@ This application will require Node.js to use.  It will also require running "npm
 
 To start the application, run the command "node index.js" in your terminal.  You will then be prompted for several inputs needed to generate your README file.  Complete all inputs and your README file will be generated in the output_README folder.
 
-README Generator Video Demonstration:
-
-![Weather dashboard](assets/images/Screenshot.png)
+README Generator Video Demonstration: https://drive.google.com/file/d/1rvsWftTPezZtqd0jkjncMAqoOeUE3MR9/view?usp=sharing
 
 ## Credits
 
